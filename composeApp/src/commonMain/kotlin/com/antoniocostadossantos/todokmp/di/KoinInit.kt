@@ -9,8 +9,7 @@ fun initKoin(config: KoinAppDeclaration? = null): KoinApplication {
     return startKoin {
         includes(config)
         modules(
-            sharedModule,
-            platformModule
+            platformModules
         )
     }
 }

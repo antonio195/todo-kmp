@@ -1,14 +1,16 @@
 package com.antoniocostadossantos.todokmp.di
 
-import org.koin.core.module.Module
 import org.koin.dsl.module
 
-// Shared definitions (Compiler Plugin DSL)
-val sharedModule = module {
-//    single<UserRepository>()
-//    single<ApiClient>()
-//    factory<GetUserUseCase>()
+private val dataModule = module {
+
 }
 
-// Platform-specific modules (defined per platform)
-expect val platformModule: Module
+private val viewModelModule = module {
+
+}
+
+val platformModules = listOf(
+    dataModule,
+    viewModelModule
+)
